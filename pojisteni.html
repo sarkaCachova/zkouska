@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pojištění</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="js/Pojistenec.js"></script>
+    <script src="js/Pojisteni.js"></script>
+    <link href="app.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="display-4">Pojištění</h1>
+    <div class="row">
+        <div class="col-4">
+            <!-- FORMULAR-->
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h5 class="card-title mb-1">Nový pojištěnec</h5>
+                </div>
+                <div class="card-body">
+                    <form id="novy-form">
+                        <div class="row mb-2">
+                            <div class="col required">
+                                <label for="jmeno">Jméno</label>
+                                <input type="text" id="jmeno" class="form-control" required>
+                            </div>
+                            <div class="col required">
+                                <label for="prijmeni">Příjmení</label>
+                                <input type="text" id="prijmeni" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col required">
+                                <label for="datum">Datum narození</label>
+                                <input type="date" id="datum" class="form-control" required>
+                            </div>
+                            <div class="col">
+                                <label for="telefon">Telefon</label>
+                                <input type="tel" id="telefon" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col mb-2">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-9 required">
+                                <label for="ulice">Ulice</label>
+                                <input type="text" id="ulice" class="form-control" required>
+                            </div>
+                            <div class="col-3 required">
+                                <label for="cp">Čp</label>
+                                <input type="number" id="cp" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4 required">
+                                <label for="psc">PSČ</label>
+                                <input type="text" id="psc" class="form-control" required>
+                            </div>
+                            <div class="col-8 required">
+                                <label for="mesto">Město</label>
+                                <input type="text" id="mesto" class="form-control" required>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="potvrdit">Uložit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <!-- VYPIS -->
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h5 class="card-title mb-1">Seznam pojištěných</h5>
+                </div>
+                <div class="card-body" id="seznam-pojistenych">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/aplikace.js"></script>
+</body>
+</html>

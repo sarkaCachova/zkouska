@@ -1,0 +1,5 @@
+.required > label:after {
+    margin-left: 0.2rem;
+    content: '*';
+    color: red;
+}
